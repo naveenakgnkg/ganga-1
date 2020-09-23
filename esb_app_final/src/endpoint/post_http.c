@@ -34,7 +34,7 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, struct string *s)
   return size*nmemb;
 }
 
-void*  http_request(char* url)
+int  http_request(char* url)
 {
  printf("in http request");
   CURL *curl;
@@ -60,9 +60,11 @@ void*  http_request(char* url)
 
     /* always cleanup */
     curl_easy_cleanup(curl);
-    return (void*)s.ptr;
+    return 1;
+    //return (void*)s.ptr;
   }
-   return NULL;
+   //return NULL;
+   return -1;
   
 }
 
@@ -102,7 +104,7 @@ char* post_http(char* to_p,char* data_p)
   char* data = (char*)data_p;
   CURL *curl;
   CURLcode res;
-  char *file = "/home/riya/ganga/esb_app/src/esb/data-Payload.json";
+  char *file = "/home/riya/ganga/esb_app/response.json";
 
   FILE *fp = fopen(file, "wb");
   // In windows, this will init the winsock stuff 
@@ -136,5 +138,4 @@ char* post_http(char* to_p,char* data_p)
   return strdup((file));
   //return 0;
 }
-
 
