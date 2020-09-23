@@ -1,0 +1,16 @@
+<BMD>
+   <Envelop>s
+       <MessageID>55555EF2-107A-4452-9553-043B6D25PPPP</MessageID>
+       <MessageType>DebitCredit</MessageType>
+       <Sender>000E2EAA-1D5B-4BC0-ACC4-4C00069408DA</Sender>
+       <Destination>0000F82F-4687-433D-AA23-1966330381FE</Destination>
+       <CreationDateTime>2020-09-10T18:08:00+0000</CreationDateTime>
+       <Signature>63f5f61f7a99991f715433f8f3689390d1f5da4f855169023300491c00b8113c</Signature>
+       <ReferenceID>8NV-PROFILE-999712</ReferenceID>
+       <UserProperties>
+           <key1>Value1</key1>
+           <key2>Value2</key2>
+       </UserProperties>
+   </Envelop>
+   <Payload>333-22-4444</Payload>
+</BMD>

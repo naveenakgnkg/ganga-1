@@ -1,0 +1,17 @@
+<BMD>
+<Envelop>
+<MessageID>M5</MessageID>
+<MessageType>Bal</MessageType>
+<Sender>S5</Sender>
+<Destination>D5</Destination>
+<CreationDateTime>2020-08-12T05:18:00+00001</CreationDateTime>
+<Signature>S5</Signature>
+<ReferenceID>R5</ReferenceID>
+<UserProperties>
+<key1>Value15</key1>
+<key2>Value25</key2>
+</UserProperties>
+</Envelop>
+<Payload>001-01-12347</Payload>
+</BMD>
+

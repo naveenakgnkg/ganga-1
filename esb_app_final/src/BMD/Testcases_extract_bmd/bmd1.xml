@@ -1,0 +1,16 @@
+<BMD>
+<Envelop>
+<MessageID>A9ECAEF2</MessageID>
+<MessageType>CreditReport</MessageType>
+<Sender>756E2EAA</Sender>
+<Destination>6393F82F</Destination>
+<CreationDateTime>2020-08-12T05:18:00+0000</CreationDateTime>
+<Signature>63f5f61f</Signature>
+<ReferenceID>INV-PROFILE-889712</ReferenceID>
+<UserProperties>
+<key1>Value1</key1>
+<key2>Value2</key2>
+</UserProperties>
+</Envelop>
+<Payload>001-01-1234</Payload>
+</BMD>
