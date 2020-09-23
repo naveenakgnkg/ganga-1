@@ -17,20 +17,25 @@
 #include <pthread.h>
 
 
+pthread_mutex_t lock;
+
 void * poll_database_for_new_requests(void * vargp) {
   sleep(7);
   // Step 1: Open a DB connection
   int i = 0;
   while (i < 1) {
-
+    pthread_mutex_lock(&lock);
 
     task_list * req = fetch_data1();
     if (req == NULL) {
       printf("no request\n");
+      pthread_mutex_unlock(&lock);
     }
 
     if (req != NULL) {
-
+      update_status("processing", req -> id);
+      pthread_mutex_unlock(&lock);
+      printf("processing  %d\n", req -> id);
       int route_id = select_active_routes(req -> MessageType, req -> Sender, req -> Destination);
       char * data_location = req -> data_location;
       //printf("%s",b->payload);
