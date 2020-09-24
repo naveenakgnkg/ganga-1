@@ -22,8 +22,8 @@ pthread_mutex_t lock;
 void * poll_database_for_new_requests(void * vargp) {
   sleep(7);
   // Step 1: Open a DB connection
-  int i = 0;
-  while (i < 1) {
+  
+  while (true) {
     pthread_mutex_lock(&lock);
 
     task_list * req = fetch_data1();
@@ -38,7 +38,6 @@ void * poll_database_for_new_requests(void * vargp) {
       printf("processing  %d\n", req -> id);
       int route_id = select_active_routes(req -> MessageType, req -> Sender, req -> Destination);
       char * data_location = req -> data_location;
-      //printf("%s",b->payload);
       tp_data * n1 = get_tp_data(route_id);
       //tf_data* n2 = get_tf_data(route_id);
       char * transport_key = strdup(n1 -> config_k);
@@ -84,7 +83,7 @@ void * poll_database_for_new_requests(void * vargp) {
 
         int x = sendemail("riyatoteja1998@gmail.com", "/home/riya/ganga/esb_app/src/esb/data-Payload.json");
         if (x == 1) {
-          printf("mail sent successfully");
+          printf("mail sent successfully\n");
           update_status("done", req -> id);
           printf("DONE\n");
         } else printf("could not send mail");
