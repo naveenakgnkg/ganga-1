@@ -18,7 +18,7 @@ int sendemail(char *To, char *path_p) {
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_easy_setopt(curl, CURLOPT_USERNAME, "riyatoteja1998@gmail.com");
-    curl_easy_setopt(curl, CURLOPT_PASSWORD, "8p26aa0026");
+    curl_easy_setopt(curl, CURLOPT_PASSWORD, "*********");//some password
 
     curl_easy_setopt(curl, CURLOPT_URL, "smtp://smtp.gmail.com:587/");
     curl_easy_setopt(curl, CURLOPT_USE_SSL, CURLUSESSL_ALL);
