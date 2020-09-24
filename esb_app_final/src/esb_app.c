@@ -249,10 +249,13 @@ pthread_t thread_id[2];
 void kore_parent_configure(int argc, char *argv[])
 {
 	printf("\n%%%%%%%%%% kore_parent_configure\n");
-	for (int i = 0; i < 2; i++)
+	for ( i = 0; i < 2; i++)
 	{
 		pthread_create(&(thread_id[i]), NULL, poll_database_for_new_requests, NULL);
-                pthread_join(thread_id[i]);
+        }
+        for ( i = 0; i < 2; i++)
+	{
+                pthread_join(thread_id[i],NULL);
         }
 }
 
