@@ -156,7 +156,7 @@ int select_active_routes(char *message_type,char *sender,char *destination)
  else
  {
   printf("no route found");
- }
+ }  
  /* Free the result metadata */
  mysql_free_result(prepare_meta_result);
 
