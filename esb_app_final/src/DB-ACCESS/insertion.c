@@ -120,7 +120,7 @@ bind[6].length= &str_length[6];
 
 /*Status Details*/
 bind[7].buffer_type= MYSQL_TYPE_STRING;
-bind[7].buffer= (char *)&status_details_value;
+bind[7].buffer= (char *)&status_details_value;   
 bind[7].is_null= 0;
 bind[7].buffer_length= STRING_SIZE;
 bind[7].length= &str_length[7];
